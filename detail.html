@@ -1,19 +1,53 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>상세 정보</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>Detail</title>
+
+<style>
+body {
+  background: #111;
+  color: white;
+  font-family: Arial;
+  padding: 20px;
+}
+</style>
 </head>
+
 <body>
 
 <h1 id="title"></h1>
+<p id="desc"></p>
 
-<div id="content"></div>
+<script>
+const params = new URLSearchParams(location.search);
+const ride = params.get("ride");
 
-<a href="index.html">← 돌아가기</a>
+const data = {
 
-<script src="js/script.js"></script>
+ithaca: ["이타카", "여정의 시작과 귀환의 의미"],
+troy: ["트로이 전쟁", "전쟁과 전략 체험"],
+cicones: ["키코네스", "전투 후의 대가 체험"],
+lotus: ["로터스", "망각과 유혹 체험"],
+cyclops: ["키클롭스", "거인의 동굴 탈출"],
+aeolus: ["아이올로스", "바람의 통제와 실패"],
+laestrygonians: ["라이스트뤄고네스", "거인들의 공포 체험"],
+circe: ["키르케", "마법과 변신 체험"],
+underworld: ["저승", "죽은 자의 세계 탐험"],
+sirens: ["세이렌", "유혹을 견디는 선택"],
+scylla: ["스킬라와 카리브디스", "양자택일의 공포"],
+helios: ["헬리오스", "금기와 벌"],
+calypso: ["칼립소", "유혹과 정체"],
+phaeacia: ["파이아케스", "도움과 귀환"],
+final: ["최종 귀환", "오디세우스의 완성"]
+
+};
+
+if (data[ride]) {
+  document.getElementById("title").innerText = data[ride][0];
+  document.getElementById("desc").innerText = data[ride][1];
+}
+</script>
 
 </body>
 </html>
