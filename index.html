@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
 <meta charset="UTF-8">
-<title>Odyssey Theme Park Map</title>
+<title>Odyssey Map</title>
 
 <style>
 body {
@@ -22,16 +22,11 @@ body {
 /* 클릭 영역 */
 .point {
   position: absolute;
-  width: 60px;
-  height: 60px;
-  background: rgba(255,255,255,0);
-  border: 2px solid red;
+  width: 40px;
+  height: 40px;
+  background: rgba(255,0,0,0.4);
+  border-radius: 50%;
   cursor: pointer;
-}
-
-/* 호버하면 보이게 */
-.point:hover {
-  border: 2px solid gold;
 }
 </style>
 </head>
@@ -40,24 +35,32 @@ body {
 
 <div class="map-container">
 
-  <!-- 지도 이미지 -->
-  <img src="map.png">
-  
-  <!-- 키클롭스 위치 -->
-<div class="point" style="top: 40%; left: 25%;" onclick="goDetail('cyclops')"></div>
+<img src="map.png">
 
-  <!-- 포세이돈 위치 -->
-<div class="point" style="top: 55%; left: 80%;" onclick="goDetail('poseidon')"></div>
+<!-- 15개 어트랙션 -->
+<div class="point" style="top:80%; left:50%;" onclick="goDetail('ithaca')"></div>
+<div class="point" style="top:75%; left:60%;" onclick="goDetail('troy')"></div>
+<div class="point" style="top:70%; left:45%;" onclick="goDetail('cicones')"></div>
+<div class="point" style="top:65%; left:30%;" onclick="goDetail('lotus')"></div>
+<div class="point" style="top:60%; left:35%;" onclick="goDetail('cyclops')"></div>
+<div class="point" style="top:55%; left:50%;" onclick="goDetail('aeolus')"></div>
+<div class="point" style="top:50%; left:60%;" onclick="goDetail('laestrygonians')"></div>
+<div class="point" style="top:45%; left:70%;" onclick="goDetail('circe')"></div>
+<div class="point" style="top:40%; left:55%;" onclick="goDetail('underworld')"></div>
+<div class="point" style="top:35%; left:65%;" onclick="goDetail('sirens')"></div>
+<div class="point" style="top:30%; left:75%;" onclick="goDetail('scylla')"></div>
+<div class="point" style="top:25%; left:60%;" onclick="goDetail('helios')"></div>
+<div class="point" style="top:20%; left:50%;" onclick="goDetail('calypso')"></div>
+<div class="point" style="top:15%; left:40%;" onclick="goDetail('phaeacia')"></div>
+<div class="point" style="top:10%; left:50%;" onclick="goDetail('final')"></div>
 
 </div>
 
 <script>
 function goDetail(name){
-  window.location.href = "detail.html?name=" + name;
+  location.href = "detail.html?ride=" + name;
 }
 </script>
-
-<!-- rebuild -->
 
 </body>
 </html>
