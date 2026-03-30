@@ -1,19 +1,61 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <title>Odyssey Theme Park</title>
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<title>Odyssey Theme Park Map</title>
+
+<style>
+body {
+  margin: 0;
+  background: black;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+}
+
+.map-container img {
+  width: 100%;
+}
+
+/* 클릭 영역 */
+.point {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: rgba(255,255,255,0);
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+/* 호버하면 보이게 */
+.point:hover {
+  border: 2px solid gold;
+}
+</style>
 </head>
+
 <body>
 
-<h1>Odyssey Theme Park</h1>
-<p>세계 선택</p>
+<div class="map-container">
 
-<div class="container">
-  <a href="god.html" class="card">🔱 신의 세계</a>
-  <a href="human.html" class="card">⚓ 인간의 세계</a>
+  <!-- 지도 이미지 -->
+  <img src="map.png">
+
+  <!-- 키클롭스 위치 -->
+  <div class="point" style="top: 30%; left: 35%;" onclick="goDetail('cyclops')"></div>
+
+  <!-- 포세이돈 위치 -->
+  <div class="point" style="top: 60%; left: 70%;" onclick="goDetail('poseidon')"></div>
+
 </div>
+
+<script>
+function goDetail(name){
+  window.location.href = "detail.html?name=" + name;
+}
+</script>
 
 </body>
 </html>
