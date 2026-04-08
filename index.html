@@ -34,17 +34,15 @@
 
     
     .point {
-      position: absolute;
-      width: 42px;
-      height: 42px;
-      transform: translate(-50%, -50%);
-      border-radius: 50%;
-      background: rgba(255, 0, 0, 0.28);
-      border: 2px solid rgba(255, 255, 255, 0.75);
-      cursor: pointer;
-      transition: transform 0.15s ease, background 0.15s ease;
-      z-index: 10;
-    }
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: rgba(255,0,0,0.4);
+  border-radius: 50%;
+  cursor: pointer;
+
+  transform: translate(-50%, -50%);
+}
 
     .point:hover {
       transform: translate(-50%, -50%) scale(1.12);
@@ -74,7 +72,7 @@
       <div class="point hidden-look" style="left: 14.9%; top: 20.2%;" onclick="goDetail('troy')" title="트로이"></div>
 
       
-      <div class="point hidden-look" style="left: 14.2%; top: 69.9%;" onclick="goDetail('cicones')" title="키코네스"></div>
+      <div class="point hidden-look" style="left: 14.0%; top: 70.0%;" onclick="goDetail('cicones')" title="키코네스"></div>
 
       
       <div class="point hidden-look" style="left: 10.8%; top: 67.0%;" onclick="goDetail('lotophagi')" title="로토파고이"></div>
