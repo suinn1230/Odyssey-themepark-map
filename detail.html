@@ -100,7 +100,12 @@
 <p id="queueText"></p>
 
 <h4>실제 탑승</h4>
-<img id="rideImg" class="hero" src="" alt="" />
+
+<div class="ride-gallery">
+  <img id="rideImg1" class="hero half" src="" />
+  <img id="rideImg2" class="hero half" src="" />
+</div>
+
 <p id="rideText"></p>
 </div>
 
@@ -199,6 +204,19 @@
         cast: "선원 / 항해사 역할 캐스트.",
         rideinfo: "보트형 워터 라이드, 팀 분리형 구성 가능.",
         note: "감정 흐름: 불안 → 혼란 → 협동 → 생존."
+
+        entryImg: "images/poseidon-entry.jpeg",
+        entryText: "폭풍이 시작되는 항구 입장 공간. 거대한 파도와 번개 연출로 긴장감을 형성한다.",
+
+        casterImg: "images/poseidon-caster.jpeg",
+        casterText: "선원과 항해사 캐스터가 긴박한 상황을 안내하며 협동 미션 분위기를 만든다.",
+
+        queueImg: "images/poseidon-queue.jpeg",
+        queueText: "폭풍이 다가오는 항구와 배 내부를 따라 이동하는 대기 동선. 점점 강해지는 파도와 사운드로 몰입도를 높인다.",
+
+        rideImg1: "images/poseidon-ride.png",
+        rideImg2: "images/poseidon-ride2.png",
+        rideText: "보트가 폭풍 속으로 진입한 뒤 팀이 나뉘어 각자의 구간에서 협동 미션을 수행하는 워터 어트랙션.",
       },
 
       aeolus: {
@@ -349,7 +367,8 @@
       document.getElementById("queueImg").src = info.queueImg || "";
       document.getElementById("queueText").textContent = info.queueText || "";
       
-      document.getElementById("rideImg").src = info.rideImg || "";
+      document.getElementById("rideImg1").src = info.rideImg1 || "";
+      document.getElementById("rideImg2").src = info.rideImg2 || "";
       document.getElementById("rideText").textContent = info.rideText || "";
       
       document.getElementById("story").textContent = info.story;
