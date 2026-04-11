@@ -365,7 +365,6 @@
     const info = data[id];
 
     if (info) {
-      document.getElementById("title").textContent = info.title;
       document.getElementById("entryImg").src = info.entryImg || "";
       document.getElementById("entryText").textContent = info.entryText || "";
 
@@ -374,16 +373,15 @@
 
       document.getElementById("queueImg").src = info.queueImg || "";
       document.getElementById("queueText").textContent = info.queueText || "";
-      
-      document.getElementById("rideImg1").src = info.rideImg1 || "";
-      document.getElementById("rideImg2").src = info.rideImg2 || "";
+
+      document.getElementById("rideImg").src = info.rideImg || "";
       document.getElementById("rideText").textContent = info.rideText || "";
-      
+
       document.getElementById("story").textContent = info.story;
       document.getElementById("mission").textContent = info.mission;
       document.getElementById("space").textContent = info.space;
       document.getElementById("cast").textContent = info.cast;
-      document.getElementById("rideinfo").innerHTML = info.rideinfo;
+      document.getElementById("rideinfo").textContent = info.rideinfo;
       document.getElementById("note").textContent = info.note;
     } else {
       document.getElementById("title").textContent = "정보 없음";
