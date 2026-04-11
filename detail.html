@@ -69,7 +69,19 @@
   <div class="container">
     <a class="back" href="index.html">← 맵으로 돌아가기</a>
     <h1 id="title">어트랙션</h1>
-    <img id="hero" class="hero" src="" alt="" />
+   <div class="image-section">
+  <h3>입장 / 대기 공간</h3>
+  <img id="entryImg" class="hero" src="" alt="" />
+  <p id="entryText"></p>
+
+  <h3>캐스터 설정</h3>
+  <img id="casterImg" class="hero" src="" alt="" />
+  <p id="casterText"></p>
+
+  <h3>탑승 정보</h3>
+  <img id="rideImg" class="hero" src="" alt="" />
+  <p id="rideText"></p>
+</div>
 
     <div class="grid">
       <div class="card">
@@ -142,7 +154,16 @@
         space: "동굴, 양 우리, 횃불, 낮은 통로.",
         cast: "탈출을 돕는 오디세우스의 동료.",
         rideinfo: "롤러코스터 + 다크라이드, 16~20명, 약 3~4분.",
-        note: "감정 흐름: 긴장 → 공포 → 몰입 → 탈출."
+        note: "감정 흐름: 긴장 → 공포 → 몰입 → 탈출.",
+
+        entryImg: "images/cyclops-entry.jpeg",
+        entryText: "동굴 입구와 양 우리 형태로 구성된 입장 공간. 횃불과 거대한 외눈 장식으로 긴장감을 극대화.",
+
+       casterImg: "images/cyclops-caster.jpeg",
+       casterText: "오디세우스의 동료 캐스터. 찢어진 전사복과 먼지 표현으로 생존자 분위기 연출.",
+
+       rideImg: "images/cyclops-queue.jpeg",
+       rideText: "동굴 내부 대기 동선과 거인의 흔적을 지나며 몰입도를 높인 뒤, 양 아래에 숨는 설정으로 탑승 진행."
       },
 
       poseidon: {
@@ -295,8 +316,15 @@
 
     if (info) {
       document.getElementById("title").textContent = info.title;
-      document.getElementById("hero").src = info.image;
-      document.getElementById("hero").alt = info.title;
+      document.getElementById("entryImg").src = info.entryImg || "";
+      document.getElementById("entryText").textContent = info.entryText || "";
+
+      document.getElementById("casterImg").src = info.casterImg || "";
+      document.getElementById("casterText").textContent = info.casterText || "";
+
+      document.getElementById("rideImg").src = info.rideImg || "";
+      document.getElementById("rideText").textContent = info.rideText || "";
+      
       document.getElementById("story").textContent = info.story;
       document.getElementById("mission").textContent = info.mission;
       document.getElementById("space").textContent = info.space;
