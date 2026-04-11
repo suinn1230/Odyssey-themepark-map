@@ -94,8 +94,14 @@
   <p id="casterText"></p>
 
   <h3>탑승 정보</h3>
-  <img id="rideImg" class="hero" src="" alt="" />
-  <p id="rideText"></p>
+
+<h4>대기 / 큐 동선</h4>
+<img id="queueImg" class="hero" src="" />
+<p id="queueText"></p>
+
+<h4>실제 탑승</h4>
+<img id="rideImg" class="hero" src="" />
+<p id="rideText"></p>
 </div>
 
     <div class="grid">
@@ -177,9 +183,12 @@
        casterImg: "images/cyclops-caster.jpeg",
        casterText: "오디세우스의 동료 캐스터. 찢어진 전사복과 먼지 표현으로 생존자 분위기 연출.",
 
-       rideImg: "images/cyclops-queue2.jpeg",
-       rideText: "동굴 내부 대기 동선과 거인의 흔적을 지나며 몰입도를 높인 뒤, 양 아래에 숨는 설정으로 탑승 진행."
-      },
+       queueImg: "images/cyclops-queue2.jpeg",
+       queueText: "동굴 내부 대기 동선...",
+
+       rideImg: "images/cyclops-ride.jpeg",
+       rideText: "양 아래에 숨어 탈출하는 실제 탑승 구간...",
+       },
 
       poseidon: {
         title: "5. 포세이돈의 분노",
@@ -337,6 +346,9 @@
       document.getElementById("casterImg").src = info.casterImg || "";
       document.getElementById("casterText").textContent = info.casterText || "";
 
+      document.getElementById("queueImg").src = info.queueImg || "";
+      document.getElementById("queueText").textContent = info.queueText || "";
+      
       document.getElementById("rideImg").src = info.rideImg || "";
       document.getElementById("rideText").textContent = info.rideText || "";
       
