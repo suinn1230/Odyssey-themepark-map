@@ -73,6 +73,14 @@
       color: #ffd166;
     }
 
+    .card ul {
+     padding-left: 18px;
+}
+
+    .card li {
+    margin-bottom: 6px;
+}
+
     @media (max-width: 768px) {
       .grid {
         grid-template-columns: 1fr;
@@ -179,7 +187,13 @@
         mission: "들키지 않도록 몸을 숨기고 긴장을 유지하는 참여형 체험.",
         space: "동굴, 양 우리, 횃불, 낮은 통로.",
         cast: "탈출을 돕는 오디세우스의 동료.",
-        rideinfo: "롤러코스터 + 다크라이드, 16~20명, 약 3~4분.",
+        rideinfo: `
+        <ul>
+        <li>롤러코스터 형태의 다크라이드</li>
+        <li>탑승 인원 : 16~20명</li>
+        <li>탑승 시간 : 약 3~4분</li>
+        </ul>
+        `,
         note: "감정 흐름: 긴장 → 공포 → 몰입 → 탈출.",
 
         entryImg: "images/cyclops-entry.jpeg",
@@ -375,7 +389,7 @@
       document.getElementById("mission").textContent = info.mission;
       document.getElementById("space").textContent = info.space;
       document.getElementById("cast").textContent = info.cast;
-      document.getElementById("rideinfo").textContent = info.rideinfo;
+      document.getElementById("rideinfo").innerHTML = info.rideinfo;
       document.getElementById("note").textContent = info.note;
     } else {
       document.getElementById("title").textContent = "정보 없음";
