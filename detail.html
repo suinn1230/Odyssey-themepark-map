@@ -211,8 +211,8 @@
         space: "바다, 신전, 물결 조형물, 신의 위압감.",
         cast: "선원 / 항해사 역할 캐스트.",
         rideinfo: "보트형 워터 라이드, 팀 분리형 구성 가능.",
-        note: "감정 흐름: 불안 → 혼란 → 협동 → 생존."
-
+        note: "감정 흐름: 불안 → 혼란 → 협동 → 생존.",
+        
         entryImg: "images/poseidon-entry.jpeg",
         entryText: "폭풍이 시작되는 항구 입장 공간. 거대한 파도와 번개 연출로 긴장감을 형성한다.",
 
@@ -365,29 +365,31 @@
     const info = data[id];
 
     if (info) {
-      document.getElementById("entryImg").src = info.entryImg || "";
-      document.getElementById("entryText").textContent = info.entryText || "";
+  document.getElementById("title").textContent = info.title || "";
 
-      document.getElementById("casterImg").src = info.casterImg || "";
-      document.getElementById("casterText").textContent = info.casterText || "";
+  document.getElementById("entryImg").src = info.entryImg || "";
+  document.getElementById("entryText").textContent = info.entryText || "";
 
-      document.getElementById("queueImg").src = info.queueImg || "";
-      document.getElementById("queueText").textContent = info.queueText || "";
+  document.getElementById("casterImg").src = info.casterImg || "";
+  document.getElementById("casterText").textContent = info.casterText || "";
 
-      document.getElementById("rideImg").src = info.rideImg || "";
-      document.getElementById("rideText").textContent = info.rideText || "";
+  document.getElementById("queueImg").src = info.queueImg || "";
+  document.getElementById("queueText").textContent = info.queueText || "";
 
-      document.getElementById("story").textContent = info.story;
-      document.getElementById("mission").textContent = info.mission;
-      document.getElementById("space").textContent = info.space;
-      document.getElementById("cast").textContent = info.cast;
-      document.getElementById("rideinfo").textContent = info.rideinfo;
-      document.getElementById("note").textContent = info.note;
-    } else {
-      document.getElementById("title").textContent = "정보 없음";
-      document.getElementById("story").textContent = "잘못된 접근이거나 아직 데이터가 없는 항목입니다.";
-  
-    }
+  document.getElementById("rideImg1").src = info.rideImg1 || info.rideImg || "";
+  document.getElementById("rideImg2").src = info.rideImg2 || "";
+  document.getElementById("rideText").textContent = info.rideText || "";
+
+  document.getElementById("story").textContent = info.story || "";
+  document.getElementById("mission").textContent = info.mission || "";
+  document.getElementById("space").textContent = info.space || "";
+  document.getElementById("cast").textContent = info.cast || "";
+  document.getElementById("rideinfo").textContent = info.rideinfo || "";
+  document.getElementById("note").textContent = info.note || "";
+} else {
+  document.getElementById("title").textContent = "정보 없음";
+  document.getElementById("story").textContent = "잘못된 접근이거나 아직 데이터가 없는 항목입니다.";
+}
   </script>
 </body>
 </html>
