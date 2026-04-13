@@ -187,11 +187,33 @@
       cyclops: {
   title: "4. 키클롭스",
   image: "images/cyclops.jpg",
-  story: "폴리페모스의 동굴에서 양 아래에 숨어 탈출하는 장면.",
-  mission: "들키지 않도록 몸을 숨기고 긴장을 유지하는 참여형 체험.",
-  space: "동굴, 양 우리, 횃불, 낮은 통로.",
-  cast: "탈출을 돕는 오디세우스의 동료.",
-  rideinfo: "롤러코스터 + 다크라이드, 16~20명, 약 3~4분.",
+  story: "오디세우스 일행은 키클롭스의 동굴에 갇히고 방문객은 동료가 되어 거인의 시선을 피해 이동하며 어둡고 좁은 동굴을 통과하여 긴장감을 유지하고 마지막에는 양 아래에 숨는 전략으로 탈출.",
+  mission: 
+"<ul>" +
+"<li>키클롭스 시선을 피해 동굴을 이동하는 스텔스 체험</li>" +
+"<li> 거인의 발소리, 그림자 연출로 실시간 긴장감 제공</li>" +
+"<li><strong> 핵심 미션 : </strong> 양 아래에 숨어 이동하는 핵심 체험 구간</li>" +
+"<li><strong> 최종 목표 : </strong> 들키지 않고 동굴 밖으로 탈출</li>" +
+"</ul>",
+  space: 
+"<ul>" +
+"<li>거대한 외눈 조형물이 있는 동굴 입구로 강한 첫 인상</li>" +
+"<li>내부는 어둡고 좁은 통로 + 횃불 조명으로 긴장감 극대화</li>" +
+"<li>대기 공간에서 점점 깊은 동굴로 이동하며 몰입감 상승</li>" +
+"<li>벽화, 해골, 고대한 사슬 등으로 키클롭스의 위협 표현</li>" +
+"</ul>",
+  cast: 
+"<ul>" +
+"<li>오디세우스 동료 역할 캐스터가 탈출 상황 안내</li>" +
+"<li>방문객에게 몸을 숙이고 조용히 이동하도록 유도</li>" +
+"<li>긴장된 표정과 행동으로 위기 상황 연출</li>" +
+"<li> 일부 캐스터는 키클롭스 등장 타이밍을 연출</li>" +
+"</ul>",
+  rideinfo: 
+"<ul>" +
+"<li>탑승 인원 : 1팀당 5명</li>" +
+"<li>체험 시간 : 약 10분</li>" +
+"</ul>",
   note: "감정 흐름: 긴장 → 공포 → 몰입 → 탈출.",
 
   entryImg: "images/cyclops2-entry.jpeg",
@@ -421,10 +443,10 @@ goodsText:
   document.getElementById("goodsText").innerHTML = info.goodsText || "";
 
   document.getElementById("story").textContent = info.story || "";
-  document.getElementById("mission").textContent = info.mission || "";
-  document.getElementById("space").textContent = info.space || "";
-  document.getElementById("cast").textContent = info.cast || "";
-  document.getElementById("rideinfo").textContent = info.rideinfo || "";
+  document.getElementById("mission").innerHTML = info.mission || "";
+  document.getElementById("space").innerHTML = info.space || "";
+  document.getElementById("cast").inneHTML = info.cast || "";
+  document.getElementById("rideinfo").innerHTML = info.rideinfo || "";
   document.getElementById("note").textContent = info.note || "";
 } else {
   document.getElementById("title").textContent = "정보 없음";
