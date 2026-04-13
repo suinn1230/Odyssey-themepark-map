@@ -97,9 +97,6 @@
   <img id="entryImg" class="hero" src="" alt="" />
   <p id="entryText"></p>
 
-  <h3>캐스터 설정</h3>
-  <img id="casterImg" class="hero" src="" alt="" />
-  <p id="casterText"></p>
 
   <h3>탑승 정보</h3>
 
@@ -200,9 +197,7 @@
   entryImg: "images/cyclops2-entry.jpeg",
   entryText: "동굴 입구와 양 우리 형태 입장 공간",
 
-  casterImg: "images/cyclops-caster.jpeg",
-  casterText: "생존자 캐스터",
-
+  
   queueImg: "images/cyclops2-queue.jpeg",
   queueText: "동굴 내부 대기 동선",
 
@@ -242,9 +237,6 @@
         
         entryImg: "images/poseidon-entry.jpeg",
         entryText: "폭풍이 시작되는 항구 입장 공간. 거대한 파도와 번개 연출로 긴장감을 형성한다.",
-
-        casterImg: "images/poseidon-caster.jpeg",
-        casterText: "선원과 항해사 캐스터가 긴박한 상황을 안내하며 협동 미션 분위기를 만든다.",
 
         queueImg: "images/poseidon-queue.jpeg",
         queueText: "폭풍이 다가오는 항구와 배 내부를 따라 이동하는 대기 동선. 점점 강해지는 파도와 사운드로 몰입도를 높인다.",
@@ -414,8 +406,6 @@ goodsText:
   document.getElementById("entryImg").src = info.entryImg || "";
   document.getElementById("entryText").textContent = info.entryText || "";
 
-  document.getElementById("casterImg").src = info.casterImg || "";
-  document.getElementById("casterText").textContent = info.casterText || "";
 
   document.getElementById("queueImg").src = info.queueImg || "";
   document.getElementById("queueText").textContent = info.queueText || "";
