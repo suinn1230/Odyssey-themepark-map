@@ -92,6 +92,10 @@
   <div class="container">
     <a class="back" href="index.html">← 맵으로 돌아가기</a>
     <h1 id="title">어트랙션</h1>
+    <div id="showSection" style="display:none;">
+  <img id="showImg" class="hero" src="" />
+  <p id="showText"></p>
+</div>
    <div class="image-section">
   <h3>입장 / 대기 공간</h3>
   <img id="entryImg" class="hero" src="" alt="" />
@@ -468,14 +472,47 @@ goodsText:
       },
 
       laestrygonians: {
-        title: "7. 라이스트뤄고네스",
-        image: "images/laestrygonians.jpg",
-        story: "식인 거인족에게 함대가 공격받는 공포 구간.",
-        mission: "거인에게 들키지 않고 항구를 탈출.",
-        space: "절벽 항구, 거대한 바위, 무너진 배들.",
-        cast: "겁에 질린 생존자 캐스트.",
-        rideinfo: "공포형 체험 또는 추격형 라이드.",
-        note: "공포 요소가 강해서 호러형 어트랙션으로도 적합."
+        title: "7. 라이스트뤄고네스 : 식인 거인의 섬",
+
+        type: "show"
+
+        showImg: "images/laestrygoniansentry.png",
+        showText: "텔레퓔로스 섬의 참극을 재현한 360도 수상 스턴트 쇼",
+        story: 
+        "<ul>" +
+        "<li>텔레퓔로스 섬의 비극적인 참극을 스펙터클한 스턴트와 거대한 물기둥 효과로 재현한 초대형 원형 수상 스턴트 쇼.</li>" +
+        "<li>방문객은 오디세우스 일행이 겪은 가장 끔찍하고 압도적이었던 파괴와 탈출의 순간을 360도 전방위에서 생생하게 목격한다.</li>" +
+        "</ul>",
+        mission: "",
+        space:
+        "<ul>" +
+        "<li>공연장은 거대한 바위 절벽과 궁전이 구현된 중앙의 원형 섬 모형으로 구성된다.</li>" +
+        "<li>섬을 도넛 모양으로 둘러싼 대형 수조와, 그 바깥을 감싸는 360도 원형 객석으로 설계된다.</li>" +
+        "<li>앞열 관객들은 거인들이 바위를 던질 때마다 물보라를 직접 맞는 스플래시 존을 경험할 수 있다.</li>" +
+        "</ul>",
+        cast: 
+        "<ul>" +
+        "<li><strong style='color:#ffd166;'>캐릭터 :</strong> 라이스트뤼고네스의 굶주림</li>" +
+        "<li>식인 거인족의 손아귀에서 극적으로 탈출한 생존자 캐스터.</li>" +
+        "<li>방문객들에게 거인의 굶주림을 경고하고 필사의 탈출 분위기를 조성한다.</li>" +
+        "</ul>",
+        rideinfo: 
+        "<ul>" +
+        "<li>어트랙션 형태 : 360도 원형 수상 스턴트 쇼</li>" +
+        "<li>관람 방식 : 원형 객석 관람형</li>" +
+        "<li>특수 효과 : 물기둥, 스플래시, 스턴트, 거대 거인 연출</li>" +
+        "</ul>",
+
+        goodsImg1: "images/laestrygoniansgoods.png",
+        goodsImg2: "images/laestrygoniansgoods2.png",
+        goodsImg3: "",
+
+        goodsText:
+        "<ul>" +
+        "<li>식인 거인의 굶주림 피규어</li>" +
+        "<li>오디세우스 배 모형 조립 에디션</li>" +
+        "</ul>"
+    
       },
 
       circe: {
@@ -594,6 +631,17 @@ goodsText:
     const info = data[id];
 
     if (info) {
+
+      if (info.type === "show") {
+  document.getElementById("defaultSection").style.display = "none";
+  document.getElementById("showSection").style.display = "block";
+
+  document.getElementById("showImg").src = info.showImg || "";
+  document.getElementById("showText").textContent = info.showText || "";
+} else {
+  document.getElementById("defaultSection").style.display = "block";
+  document.getElementById("showSection").style.display = "none";
+}
   document.getElementById("title").textContent = info.title || "";
 
   document.getElementById("entryImg").src = info.entryImg || "";
