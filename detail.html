@@ -154,12 +154,43 @@
       troy: {
         title: "1. 트로이 목마",
         image: "images/troy.jpg",
-        story: "트로이 전쟁의 시작점. 목마 작전과 전쟁의 스케일을 체험하는 존.",
-        mission: "진영 분기형 체험 또는 전쟁 서사 브리핑.",
-        space: "고대 성벽, 목마 조형물, 전쟁 직후의 도시 연출.",
-        cast: "그리스군 병사 / 작전 브리핑 담당 캐스트.",
-        rideinfo: "전투형 다크라이드 또는 인터랙티브 존.",
+        story:
+        "<ul>" +
+        "<li>관람객은 트로이 전쟁의 핵심 사건인 ‘목마 작전’에 참여하는 병사가 된다.</li>" +
+        "<li>탑승 전 무작위로 그리스군 또는 트로이군에 배정되며, 같은 사건을 서로 다른 시점에서 체험한다.</li>" +
+        "</ul>",
+        mission: 
+        "<ul>" +
+        "<li><strong style='color:#ffd166;'>그리스군 :</strong> 목마 내부에 숨어 있다가 야간에 침투하여 성문을 개방</li>" +
+        "<li><strong style='color:#ffd166;'>트로이군 :</strong> 목마를 감시하고 침입자를 탐지하여 성문을 방어</li>" +
+        "<li>슈팅 인터랙션을 통해 전투에 참여하며, 행동에 따라 점수가 부여된다.</li>" +
+        "</ul>",
+        space: 
+        "<ul>" +
+        "<li>입구는 트로이 성벽과 거대한 목마 조형물로 구성된다.</li>" +
+        "<li>라이드는 목마 내부와 트로이 도시 전투 공간으로 이어진다.</li>" +
+        "<li>어두운 내부와 불타는 도시 연출로 긴장감을 강화한다.</li>" +
+        "</ul>",
+        cast: 
+        "<ul>" +
+        "<li>찢어진 의상, 먼지·흙 묻은 생존자 컨셉</li>" +
+        "<li>방문객에게 몸을 숙이고 조용히 이동하도록 유도</li>" +
+        "</ul>",
+        rideinfo: 
+        "<ul>" +
+        "<li>인터랙티브 다크라이드 (팀 대항전)</li>" +
+        "<li>차량당 4~8명 탑승, 약 5~6분 진행</li>" +
+        "<li>트랙 기반 이동과 슈팅 시스템이 결합된 구조</li>" +
+        "</ul>",
         note: "이미지가 없으면 images/troy.jpg 대신 원하는 파일로 바꾸면 됨."
+
+        rideImg1: "images/troyqueue.png",
+        rideImg2: "images/troyqueue2.png",
+
+        goodsImg: "images/troygoods.png",
+                  "images/troygoods2.png",
+                  "images/troygoods3.png",
+    
       },
 
       cicones: {
@@ -477,7 +508,7 @@ goodsText:
   document.getElementById("goodsImg").src = info.goodsImg || "";
   document.getElementById("goodsText").innerHTML = info.goodsText || "";
 
-  document.getElementById("story").textContent = info.story || "";
+  document.getElementById("story").innerHTML = info.story || "";
   document.getElementById("mission").innerHTML = info.mission || "";
   document.getElementById("space").innerHTML = info.space || "";
   document.getElementById("cast").innerHTML = info.cast || "";
