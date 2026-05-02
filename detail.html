@@ -116,8 +116,13 @@
   <p id="photozoneText"></p>
 
   <h3>굿즈 및 간식</h3>
-  <img id="goodsImg" class="hero" src="" alt="" />
-  <p id="goodsText"></p>
+ <div class="ride-gallery">
+  <img id="goodsImg1" class="hero half" src="" />
+  <img id="goodsImg2" class="hero half" src="" />
+</div>
+<img id="goodsImg3" class="hero" src="" />
+
+<p id="goodsText"></p>
 
 </div>
 
@@ -505,7 +510,9 @@ goodsText:
   document.getElementById("photozoneImg").src = info.photozoneImg || "";
   document.getElementById("photozoneText").innerHTML = info.photozoneText || "";
 
-  document.getElementById("goodsImg").src = info.goodsImg || "";
+  document.getElementById("goodsImg1").src = info.goodsImg1 || "";
+  document.getElementById("goodsImg2").src = info.goodsImg2 || "";
+  document.getElementById("goodsImg3").src = info.goodsImg3 || "";
   document.getElementById("goodsText").innerHTML = info.goodsText || "";
 
   document.getElementById("story").innerHTML = info.story || "";
