@@ -745,7 +745,7 @@ goodsText:
         "<li>활 시험을 통해 자신의 정체를 드러내고, 페넬로페와 재회하며 질서와 평화를 되찾는다.</li>" +
         "</ul>",
         mission: "",
-        space: ",
+        space: "",
         cast: 
         "<ul>" +
         "<li><strong style='color:#ffd166;'>오디세우스 :</strong> 초반에는 표류자, 중반에는 거지, 후반에는 왕의 모습으로 변화한다.</li>" +
@@ -785,6 +785,22 @@ goodsText:
 
     if (info) {
 
+  document.getElementById("missionCard").style.display = "block";
+  document.getElementById("noteCard").style.display = "block";
+
+  document.getElementById("entryImg").style.display = "block";
+  document.getElementById("entryText").style.display = "block";
+  document.querySelector("#defaultSection h3").style.display = "block";
+
+  document.getElementById("queueImg").style.display = "block";
+  document.getElementById("queueText").style.display = "block";
+  document.querySelector("#defaultSection h4:nth-of-type(1)").style.display = "block";
+  document.querySelector("#defaultSection h4:nth-of-type(2)").style.display = "block";
+
+  document.getElementById("photozoneImg").style.display = "block";
+  document.getElementById("photozoneText").style.display = "block";
+
+      
       if (info.type === "show") {
   document.getElementById("defaultSection").style.display = "none";
   document.getElementById("showSection").style.display = "block";
