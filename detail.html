@@ -62,6 +62,17 @@
       gap: 16px;
     }
 
+     .ride-gallery {
+       display: flex;
+       gap: 10px;
+
+  }
+
+    .hero.half {
+      width: 50%;
+
+  }
+
     .card {
       background: #1f2937;
       border-radius: 14px;
@@ -93,7 +104,10 @@
     <a class="back" href="index.html">← 맵으로 돌아가기</a>
     <h1 id="title">어트랙션</h1>
     <div id="showSection" style="display:none;">
-  <img id="showImg" class="hero" src="" />
+  <div class="ride-gallery">
+    <img id="showImg" class="hero half" src="" />
+    <img id="showImg2" class="hero half" src="" />
+  </div>
   <p id="showText"></p>
 </div>
    
@@ -764,7 +778,7 @@ goodsText:
         note: "",
 
         rideImg1: "images/ithacashow.png",
-        rideImg2: "images/ ithacashow2.png",
+        rideImg2: "images/ithacashow2.png",
         rideText: "",
 
         goodsImg1: "images/ithacagoods.png",
@@ -806,6 +820,7 @@ goodsText:
   document.getElementById("showSection").style.display = "block";
 
   document.getElementById("showImg").src = info.showImg || "";
+  document.getElementById("showImg2").src = info.showImg2 || "";
   document.getElementById("showText").textContent = info.showText || "";
 
   document.getElementById("missionCard").style.display = "none";
