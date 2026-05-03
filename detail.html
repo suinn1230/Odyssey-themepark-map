@@ -77,7 +77,6 @@
   display: block;
 }
 
-  }
 
     .card {
       background: #1f2937;
@@ -903,25 +902,35 @@ if (info.showImg2) {
   document.getElementById("rideInfoTitle").textContent = "탑승 정보";
 }
 
-  document.getElementById("entryImg").src = info.entryImg || "";
+  
   document.getElementById("entryText").textContent = info.entryText || "";
-
-
-  document.getElementById("queueImg").src = info.queueImg || "";
   document.getElementById("queueText").textContent = info.queueText || "";
-
-  document.getElementById("rideImg1").src = info.rideImg1 || info.rideImg || "";
-  document.getElementById("rideImg2").src = info.rideImg2 || "";
   document.getElementById("rideText").textContent = info.rideText || "";
-
-  document.getElementById("photozoneImg").src = info.photozoneImg || "";
   document.getElementById("photozoneText").innerHTML = info.photozoneText || "";
-
-  document.getElementById("goodsImg1").src = info.goodsImg1 || "";
-  document.getElementById("goodsImg2").src = info.goodsImg2 || "";
-  document.getElementById("goodsImg3").src = info.goodsImg3 || "";
   document.getElementById("goodsText").innerHTML = info.goodsText || "";
 
+function setImg(id, src) {
+  const img = document.getElementById(id);
+  if (!img) return;
+
+  if (src) {
+    img.style.display = "block";
+    img.src = src;
+  } else {
+    img.style.display = "none";
+    img.removeAttribute("src");
+  }
+}
+
+setImg("entryImg", info.entryImg);
+setImg("queueImg", info.queueImg);
+setImg("rideImg1", info.rideImg1 || info.rideImg);
+setImg("rideImg2", info.rideImg2);
+setImg("photozoneImg", info.photozoneImg);
+setImg("goodsImg1", info.goodsImg1);
+setImg("goodsImg2", info.goodsImg2);
+setImg("goodsImg3", info.goodsImg3);
+  
   document.getElementById("story").innerHTML = info.story || "";
   document.getElementById("mission").innerHTML = info.mission || "";
   document.getElementById("space").innerHTML = info.space || "";
