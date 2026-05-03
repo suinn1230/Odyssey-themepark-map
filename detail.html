@@ -820,7 +820,14 @@ goodsText:
   document.getElementById("showSection").style.display = "block";
 
   document.getElementById("showImg").src = info.showImg || "";
-  document.getElementById("showImg2").src = info.showImg2 || "";
+  const showImg2 = document.getElementById("showImg2");
+
+if (info.showImg2) {
+  showImg2.style.display = "block";
+  showImg2.src = info.showImg2;
+} else {
+  showImg2.style.display = "none";
+}
   document.getElementById("showText").textContent = info.showText || "";
 
   document.getElementById("missionCard").style.display = "none";
