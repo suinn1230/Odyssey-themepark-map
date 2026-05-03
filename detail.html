@@ -151,8 +151,8 @@
         <div id="cast"></div>
       </div>
       <div class="card">
-        <h3>탑승 정보</h3>
-        <div id="rideinfo"></div>
+        <h3 id="rideInfoTitle">탑승 정보</h3>
+<div id="rideinfo"></div>
     </div>
       <div class="card" id="noteCard">
       <h3>비고</h3>
@@ -732,14 +732,50 @@ goodsText:
       },
 
       ithaca: {
-        title: "17. 이타카(귀환)",
+        title: "17. 이타카 : 왕의 재회",
+        type: "show",
         image: "images/ithaca.jpg",
-        story: "오랜 여정 끝에 고향으로 돌아오는 마지막 장면.",
-        mission: "귀환의 완성과 새로운 시작.",
-        space: "고향의 궁전, 항구, 따뜻한 귀환 연출.",
-        cast: "귀환을 맞이하는 인물 캐스트.",
-        rideinfo: "엔딩 존 / 포토존 / 피날레 공간.",
-        note: "전체 테마파크의 감정적 마무리."
+
+        showImg: "images/ithacashow.png",
+        showText: "오디세우스의 귀환과 재회를 표현한 신화 서사형 야간 퍼레이드",
+        
+        story: 
+        "<ul>" +
+        "<li>오디세우스는 이타카에 도착한 뒤 거지로 변장해 복귀를 준비한다.</li>" +
+        "<li>활 시험을 통해 자신의 정체를 드러내고, 페넬로페와 재회하며 질서와 평화를 되찾는다.</li>" +
+        "</ul>",
+        mission: "",
+        space: ",
+        cast: 
+        "<ul>" +
+        "<li><strong style='color:#ffd166;'>오디세우스 :</strong> 초반에는 표류자, 중반에는 거지, 후반에는 왕의 모습으로 변화한다.</li>" +
+        "<li><strong style='color:#ffd166;'>페넬로페 :</strong> 아이보리색 드레스를 착용해 절제된 왕비의 모습을 보인다.</li>" +
+        "<li><strong style='color:#ffd166;'>텔레마코스 :</strong> 젊은 전사 느낌의 튜닉과 짧은 망토를 착용한다.</li>" +
+        "<li><strong style='color:#ffd166;'>구혼자들 :</strong> 적색, 자주색, 금색 의상으로 화려하고 사치스러운 모습을 강조한다.</li>" +
+        "<li><strong style='color:#ffd166;'>아테나 :</strong> 차갑고 고귀한 분위기의 신의 모습으로 연출한다.</li>" +
+        "</ul>",
+        rideinfo: 
+        "<ul>" +
+        "<li>신화 서사형 야간 퍼레이드</li>" +
+        "<li>공연 시간 : 약 20분</li>" +
+        "<li>장소 : 오디세이 테마파크 중앙 포세이돈 분수 앞</li>" +
+        "<li>오디세우스의 귀환, 정체 공개, 페넬로페와의 재회가 메인 장면으로 연출된다.</li>" +
+        "</ul>",
+        note: "",
+
+        rideImg1: "images/ithacashow2.png",
+        rideImg2: "",
+        rideText: "",
+
+        goodsImg1: "images/ithacagoods.png",
+        goodsImg2: "images/ithacagoods2.png",
+        goodsImg3: "images/ithacagoods3.png",
+        goodsText:
+        "<ul>" +
+        "<li>월계관 모양 머리띠</li>" +
+        "<li>오디세우스 코스튬 인형</li>" +
+        "<li>레고로 만드는 미니 피규어</li>" +
+        "</ul>"
       }
     };
 
@@ -783,6 +819,12 @@ goodsText:
 }
     
   document.getElementById("title").textContent = info.title || "";
+
+  if (info.type === "show") {
+  document.getElementById("rideInfoTitle").textContent = "관람 정보";
+} else {
+  document.getElementById("rideInfoTitle").textContent = "탑승 정보";
+}
 
   document.getElementById("entryImg").src = info.entryImg || "";
   document.getElementById("entryText").textContent = info.entryText || "";
