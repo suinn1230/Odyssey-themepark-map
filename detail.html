@@ -685,6 +685,25 @@ goodsText:
   document.getElementById("defaultSection").style.display = "block";
   document.getElementById("showSection").style.display = "none";
 }
+
+  if (info.type === "twoImage") {
+  document.getElementById("entryImg").style.display = "none";
+  document.getElementById("entryText").style.display = "none";
+  document.querySelector("#defaultSection h3").style.display = "none";
+
+  document.getElementById("queueImg").style.display = "none";
+  document.getElementById("queueText").style.display = "none";
+  document.querySelector("#defaultSection h4:nth-of-type(1)").style.display = "none";
+
+  document.querySelector("#defaultSection h4:nth-of-type(2)").style.display = "none";
+
+  document.getElementById("photozoneImg").style.display = "none";
+  document.getElementById("photozoneText").style.display = "none";
+
+  document.getElementById("noteCard").style.display = "none";
+
+}
+    
   document.getElementById("title").textContent = info.title || "";
 
   document.getElementById("entryImg").src = info.entryImg || "";
