@@ -138,10 +138,10 @@
         <h3>스토리</h3>
         <div id="story"></div>
       </div>
-      <div class="card">
-        <h3>미션 설계</h3>
-        <div id="mission"></div>
-      </div>
+      <div class="card" id="missionCard">
+      <h3>미션 설계</h3>
+      <div id="mission"></div>
+    </div>
       <div class="card">
         <h3>공간 디자인</h3>
         <div id="space"></div>
@@ -153,11 +153,11 @@
       <div class="card">
         <h3>탑승 정보</h3>
         <div id="rideinfo"></div>
-      </div>
-      <div class="card">
-        <h3>비고</h3>
-        <div id="note"></div>
-      </div>
+    </div>
+      <div class="card" id="noteCard">
+      <h3>비고</h3>
+      <div id="note"></div>
+   </div>
     </div>
   </div>
 
@@ -530,14 +530,50 @@ goodsText:
       },
 
       underworld: {
-        title: "9. 저승 방문",
+        title: "9. 저승 방문 : 저주의 예언",
+        type: "twoImage",
         image: "images/underworld.jpg",
-        story: "죽은 자의 영혼을 불러내고 예언을 듣는 네퀴아 서사.",
-        mission: "제사를 완수하고 예언을 듣고 현실 세계로 탈출.",
-        space: "안개, 젖은 바닥, 낡은 목재, 어두운 강.",
-        cast: "카론 영감의 뱃사공 캐스트.",
-        rideinfo: "보트형 어트랙션.",
-        note: "감정 키워드: 금기, 불안, 예언, 탈출."
+        
+        story:
+        "<ul>" +
+        "<li>방문객은 산 자의 몸으로 저승에 들어온 존재가 되어, 스틱스 강을 지나 예언자 테이레시아스의 예언을 듣고 죽음의 세계를 탈출하는 여정을 겪는다.</li>" +
+        "</ul>",
+        mission:
+        "<ul>" +
+        "<li>워크스루형 어트랙션으로, 제단에서 의식을 수행하고 예언을 끝까지 경청해야 한다.</li>" +
+        "<li>망자들의 습격을 피해 바닥의 빛나는 발자국을 따라 탈출구를 찾아야 한다.</li>" +
+        "</ul>",
+        space:
+        "<ul>" +
+        "<li><strong style='color:#ffd166;'>분위기 :</strong> 거친 암석 지형과 안개, 스틱스 강의 습한 질감을 살린 차가운 청색·적색 조명으로 음산하고 위압적인 저승을 연출한다.</li>" +
+        "<li><strong style='color:#ffd166;'>연출 :</strong> 홀로그램 영혼과 애니매트로닉스, 미로 같은 좁고 굽이진 통로를 배치하여 공포감과 몰입감을 극대화한다.</li>" +
+        "</ul>",
+        cast:
+        "<ul>" +
+        "<li>저승 안내자 역할의 캐스터가 등장한다.</li>" +
+        "<li>검은 로브와 창백한 분장을 하고, 감정이 절제된 차가운 태도로 관람객을 인도한다.</li>" +
+        "</ul>",
+        rideinfo:
+        "<ul>" +
+        "<li>인터랙티브 워크스루 귀신의 집 형태</li>" +
+        "<li>회당 최대 탑승 인원 : 10명</li>" +
+        "</ul>",
+        note: "",
+
+
+        rideImg1: "images/저승.png",
+        rideImg2: "images/저승내부.png",
+        rideText: "스틱스 강과 저승 내부를 지나 예언을 듣고 탈출하는 워크스루 체험",
+
+        goodsImg1: "images/저승굿즈.png",
+        goodsImg2: "images/저승굿즈2.png",
+        goodsImg3: "images/저승굿즈3.png",
+        goodsText:
+        "<ul>" +
+        "<li>저승의 영혼 머리띠</li>" +
+        "<li>테이레시아스 지팡이</li>" +
+        "<li>저승 탈출 기념 코인</li>" +
+        "</ul>"
       },
 
       sirens: {
@@ -641,6 +677,10 @@ goodsText:
 
   document.getElementById("showImg").src = info.showImg || "";
   document.getElementById("showText").textContent = info.showText || "";
+
+  document.getElementById("missionCard").style.display = "none";
+  document.getElementById("noteCard").style.display = "none";
+        
 } else {
   document.getElementById("defaultSection").style.display = "block";
   document.getElementById("showSection").style.display = "none";
