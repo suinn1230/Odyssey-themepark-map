@@ -165,15 +165,15 @@
         <div id="story"></div>
       </div>
       <div class="card" id="missionCard">
-      <h3>미션 설계</h3>
+      <h3 id="missionTitle">미션 설계</h3>
       <div id="mission"></div>
     </div>
       <div class="card">
-        <h3>공간 디자인</h3>
+        <h3 id="spaceTitle">공간 디자인</h3>
         <div id="space"></div>
       </div>
       <div class="card">
-        <h3>캐스터 설정</h3>
+        <h3 id="castTitle">캐스터 설정</h3>
         <div id="cast"></div>
       </div>
       <div class="card">
@@ -1119,6 +1119,8 @@ if (info.type === "snack") {
 
   if (info.type === "show") {
   document.getElementById("rideInfoTitle").textContent = "관람 정보";
+} else if (info.type === "restaurant") {
+  document.getElementById("rideInfoTitle").textContent = "식당 정보";
 } else {
   document.getElementById("rideInfoTitle").textContent = "탑승 정보";
 }
