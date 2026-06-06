@@ -288,7 +288,7 @@
       },
 
       lotophagi: {
-        title: "3. 간식 부스",
+        title: "3. 로토파고이 간식 부스",
         type: "snack",
 
         goodsImg1: "images/lotophagi_food1.png",
@@ -899,6 +899,22 @@ if (info.showImg2) {
   document.getElementById("photozoneText").style.display = "none";
 
   document.getElementById("noteCard").style.display = "none";
+
+  if (info.type === "snack") {
+  document.getElementById("defaultSection").style.display = "none";
+  document.getElementById("showSection").style.display = "none";
+
+  document.getElementById("story").parentElement.style.display = "none";
+  document.getElementById("missionCard").style.display = "none";
+  document.getElementById("space").parentElement.style.display = "none";
+  document.getElementById("cast").parentElement.style.display = "none";
+  document.getElementById("rideinfo").parentElement.style.display = "none";
+  document.getElementById("noteCard").style.display = "none";
+
+document.getElementById("story").parentElement.style.display = "block";
+document.getElementById("space").parentElement.style.display = "block";
+document.getElementById("cast").parentElement.style.display = "block";
+document.getElementById("rideinfo").parentElement.style.display = "block";
 
 }
     
