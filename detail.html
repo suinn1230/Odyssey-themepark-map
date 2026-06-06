@@ -1105,7 +1105,8 @@ if (info.type === "restaurant") {
   document.getElementById("rideinfo").parentElement.style.display = "none";
   document.getElementById("noteCard").style.display = "none";
 
-  document.querySelector("#defaultSection h3:nth-of-type(2)").textContent = "식당 내부";
+  const sectionTitles = document.querySelectorAll("#defaultSection h3");
+  sectionTitles[1].textContent = "식당 내부";
   document.querySelector("#defaultSection h4:nth-of-type(1)").style.display = "none";
   document.getElementById("queueImg").style.display = "none";
   document.getElementById("queueText").style.display = "none";
