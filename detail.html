@@ -845,6 +845,11 @@ goodsText:
 
     if (info) {
 
+  document.getElementById("story").parentElement.style.display = "block";
+  document.getElementById("space").parentElement.style.display = "block";
+  document.getElementById("cast").parentElement.style.display = "block";
+  document.getElementById("rideinfo").parentElement.style.display = "block";
+
   document.getElementById("missionCard").style.display = "block";
   document.getElementById("noteCard").style.display = "block";
 
@@ -900,6 +905,8 @@ if (info.showImg2) {
 
   document.getElementById("noteCard").style.display = "none";
 
+  }
+
   if (info.type === "snack") {
   document.getElementById("defaultSection").style.display = "none";
   document.getElementById("showSection").style.display = "none";
@@ -910,11 +917,6 @@ if (info.showImg2) {
   document.getElementById("cast").parentElement.style.display = "none";
   document.getElementById("rideinfo").parentElement.style.display = "none";
   document.getElementById("noteCard").style.display = "none";
-
-document.getElementById("story").parentElement.style.display = "block";
-document.getElementById("space").parentElement.style.display = "block";
-document.getElementById("cast").parentElement.style.display = "block";
-document.getElementById("rideinfo").parentElement.style.display = "block";
 
 }
     
