@@ -118,10 +118,11 @@
    
 <div class="image-section" id="defaultSection">
   
-     <h3>입장 / 대기 공간</h3>
+     <div id="entrySection">
+  <h3>입장 / 대기 공간</h3>
   <img id="entryImg" class="hero" src="" alt="" />
   <p id="entryText"></p>
-
+</div>
 
   <h3>탑승 정보</h3>
 
@@ -136,9 +137,11 @@
 </div>
 <p id="rideText"></p>
 
- <h3>대표 포토존</h3>
- <img id="photozoneImg" class="hero" src="" alt="" />
+ <div id="photozoneSection">
+  <h3>대표 포토존</h3>
+  <img id="photozoneImg" class="hero" src="" alt="" />
   <p id="photozoneText"></p>
+</div>
 
  </div>
 
@@ -1017,6 +1020,9 @@ goodsText:
 
     if (info) {
 
+  document.getElementById("entrySection").style.display = "block";
+  document.getElementById("photozoneSection").style.display = "block";
+
   const sectionTitles = document.querySelectorAll("#defaultSection h3");
 
   sectionTitles[0].style.display = "block";
@@ -1115,21 +1121,16 @@ if (info.type === "restaurant") {
   document.getElementById("rideinfo").parentElement.style.display = "none";
   document.getElementById("noteCard").style.display = "none";
 
-  sectionTitles[0].style.display = "none";
-  sectionTitles[1].textContent = "식당 내부";
-  sectionTitles[2].style.display = "none";
+  document.getElementById("entrySection").style.display = "none";
+  document.getElementById("photozoneSection").style.display = "none";
 
-  document.getElementById("entryImg").style.display = "none";
-  document.getElementById("entryText").style.display = "none";
+  document.getElementById("rideSectionTitle").textContent = "식당 내부";
 
-  document.querySelector("#defaultSection h4:nth-of-type(1)").style.display = "none";
+  document.getElementById("queueTitle").style.display = "none";
   document.getElementById("queueImg").style.display = "none";
   document.getElementById("queueText").style.display = "none";
 
-  document.querySelector("#defaultSection h4:nth-of-type(2)").style.display = "none";
-
-  document.getElementById("photozoneImg").style.display = "none";
-  document.getElementById("photozoneText").style.display = "none";
+  document.getElementById("rideTitle").textContent = "식당 전경";
 }
       
   document.getElementById("title").textContent = info.title || "";
