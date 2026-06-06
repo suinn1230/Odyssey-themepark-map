@@ -1107,6 +1107,14 @@ if (info.type === "restaurant") {
 
   const sectionTitles = document.querySelectorAll("#defaultSection h3");
   sectionTitles[1].textContent = "식당 내부";
+  
+  sectionTitles[0].style.display = "none"; // 입장 / 대기 공간 숨김
+  sectionTitles[2].style.display = "none"; // 대표 포토존 숨김
+  
+  document.getElementById("entryImg").style.display = "none";
+  document.getElementById("entryText").style.display = "none";
+  document.getElementById("photozoneImg").style.display = "none";
+  document.getElementById("photozoneText").style.display = "none";
   document.querySelector("#defaultSection h4:nth-of-type(1)").style.display = "none";
   document.getElementById("queueImg").style.display = "none";
   document.getElementById("queueText").style.display = "none";
