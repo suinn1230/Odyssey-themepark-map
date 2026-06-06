@@ -147,7 +147,13 @@
   <img id="goodsImg1" class="hero half" src="" />
   <img id="goodsImg2" class="hero half" src="" />
 </div>
-<img id="goodsImg3" class="hero" src="" />
+
+<div class="ride-gallery">
+  <img id="goodsImg3" class="hero half" src="" />
+  <img id="goodsImg4" class="hero half" src="" />
+</div>
+
+<p id="goodsText"></p>ero" src="" />
 <p id="goodsText"></p>  
 
      
@@ -897,17 +903,14 @@ if (info.showImg2) {
   document.getElementById("queueImg").style.display = "none";
   document.getElementById("queueText").style.display = "none";
   document.querySelector("#defaultSection h4:nth-of-type(1)").style.display = "none";
-
   document.querySelector("#defaultSection h4:nth-of-type(2)").style.display = "none";
 
   document.getElementById("photozoneImg").style.display = "none";
   document.getElementById("photozoneText").style.display = "none";
-
   document.getElementById("noteCard").style.display = "none";
+}
 
-  }
-
-  if (info.type === "snack") {
+if (info.type === "snack") {
   document.getElementById("defaultSection").style.display = "none";
   document.getElementById("showSection").style.display = "none";
 
@@ -917,7 +920,6 @@ if (info.showImg2) {
   document.getElementById("cast").parentElement.style.display = "none";
   document.getElementById("rideinfo").parentElement.style.display = "none";
   document.getElementById("noteCard").style.display = "none";
-
 }
     
   document.getElementById("title").textContent = info.title || "";
@@ -956,6 +958,7 @@ setImg("photozoneImg", info.photozoneImg);
 setImg("goodsImg1", info.goodsImg1);
 setImg("goodsImg2", info.goodsImg2);
 setImg("goodsImg3", info.goodsImg3);
+setImg("goodsImg4", info.goodsImg4);
   
   document.getElementById("story").innerHTML = info.story || "";
   document.getElementById("mission").innerHTML = info.mission || "";
