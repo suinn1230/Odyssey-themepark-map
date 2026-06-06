@@ -142,19 +142,21 @@
 
  </div>
 
+ <div id="goodsSection">
   <h3>굿즈 및 간식</h3>
- <div class="ride-gallery">
-  <img id="goodsImg1" class="hero half" src="" />
-  <img id="goodsImg2" class="hero half" src="" />
+
+  <div class="ride-gallery">
+    <img id="goodsImg1" class="hero half" src="" />
+    <img id="goodsImg2" class="hero half" src="" />
+  </div>
+
+  <div class="ride-gallery">
+    <img id="goodsImg3" class="hero half" src="" />
+    <img id="goodsImg4" class="hero half" src="" />
+  </div>
+
+  <p id="goodsText"></p>
 </div>
-
-<div class="ride-gallery">
-  <img id="goodsImg3" class="hero half" src="" />
-  <img id="goodsImg4" class="hero half" src="" />
-</div>
-
-<p id="goodsText"></p>
-
      
 
     <div class="grid">
@@ -758,15 +760,69 @@ goodsText:
       },
 
       shipwreck: {
-        title: "13. 오디세우스의 표류",
-        image: "images/shipwreck.jpg",
-        story: "폭풍 이후 뗏목 파괴와 표류를 체험하는 존.",
-        mission: "폭풍을 견디고 살아남기.",
-        space: "격랑, 파도, 난파 연출, 어두운 수로.",
-        cast: "조난 선원 캐스트.",
-        rideinfo: "감정형 워터 라이드.",
-        note: "희망 → 공포 → 절망 → 고요의 흐름."
-      },
+  title: "13. 마지막 폭풍 
+  hasGoods: false,
+    
+  story:
+  "<ul>" +
+  "<li>동료를 모두 잃고 홀로 뗏목에 오른 방문객.</li>" +
+  "<li>잠시 잠잠해진 바다가 순식간에 뒤집히며 포세이돈의 마지막 분노가 시작된다.</li>" +
+  "<li>살아남는 것이 유일한 목표다.</li>" +
+  "</ul>",
+
+  mission:
+  "<ul>" +
+  "<li>탑승 전 웨이팅 존 벽면에 포세이돈 신화 퀴즈 3문제를 전시한다.</li>" +
+  "<li>정답을 모두 맞힌 방문객은 패스트트랙 기회를 획득한다.</li>" +
+  "</ul>",
+
+  space:
+  "<ul>" +
+  "<li>좁고 낮은 수로에 암벽이 양옆을 압박하는 구조로 설계된다.</li>" +
+  "<li>포세이돈 삼지창 조형물이 수면 위로 솟아오른다.</li>" +
+  "<li>불규칙 번개 조명, 다방향 물 분사, 강풍 효과가 동시에 작동한다.</li>" +
+  "</ul>",
+
+  cast:
+  "<ul>" +
+  "<li><strong style='color:#ffd166;'>시인 데모도코스</strong></li>" +
+  "<li>고대 그리스 시인 복장과 리라를 들고 등장한다.</li>" +
+  "<li>헬리오스의 소 사건과 신들의 분노를 들려주며 탑승 전 서사와 긴장감을 조성한다.</li>" +
+  "</ul>",
+
+  rideinfo:
+  "<ul>" +
+  "<li>드롭 구간 포함 급류형 워터라이드</li>" +
+  "<li>탑승 인원 : 1대당 약 6~8명</li>" +
+  "<li>체험 시간 : 약 7~10분</li>" +
+  "</ul>",
+
+  
+  entryImg: "",
+  entryText: "",
+
+  queueImg: "",
+  queueText: "",
+
+  rideImg1: "images/shipwreck_ride.png",
+  rideImg2: "",
+  rideText: "",
+
+  photozoneImg: "",
+  photozoneText: "",
+
+  goodsImg1: "",
+  goodsImg2: "",
+  goodsImg3: "",
+
+  goodsText:
+  "<ul>" +
+  "<li>포세이돈 삼지창 키링</li>" +
+  "<li>폭풍 생존 기념 배지</li>" +
+  "<li>오디세우스 뗏목 미니 피규어</li>" +
+  "</ul>"
+
+},
 
       calypso: {
         title: "14. 칼립소",
@@ -860,7 +916,8 @@ goodsText:
 
   document.getElementById("missionCard").style.display = "block";
   document.getElementById("noteCard").style.display = "block";
-
+  document.getElementById("goodsSection").style.display = "block";
+      
   document.getElementById("entryImg").style.display = "block";
   document.getElementById("entryText").style.display = "block";
   document.querySelector("#defaultSection h3").style.display = "block";
@@ -961,6 +1018,10 @@ setImg("goodsImg1", info.goodsImg1);
 setImg("goodsImg2", info.goodsImg2);
 setImg("goodsImg3", info.goodsImg3);
 setImg("goodsImg4", info.goodsImg4);
+
+  if (info.hasGoods === false) {
+  document.getElementById("goodsSection").style.display = "none";
+}
   
   document.getElementById("story").innerHTML = info.story || "";
   document.getElementById("mission").innerHTML = info.mission || "";
