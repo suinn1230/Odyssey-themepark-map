@@ -1119,7 +1119,12 @@ if (info) {
   document.getElementById("rideinfo").parentElement.style.display = "none";
 
   document.querySelector("#defaultSection h3:nth-of-type(2)").textContent = "식당 내부";
-  document.querySelector("#defaultSection h4:nth-of-type(2)").textContent = "식당 사진";
+
+  document.querySelector("#defaultSection h4:nth-of-type(1)").style.display = "none";
+  hide("queueImg");
+  hide("queueText");
+
+  document.querySelector("#defaultSection h4:nth-of-type(2)").style.display = "none";
 }
 
     
@@ -1170,6 +1175,10 @@ if (
   id === "poseidon"
 ) {
   document.getElementById("goodsTitle").textContent = "굿즈 및 간식";
+}
+
+if (id === "phaeacia") {
+  document.getElementById("goodsTitle").textContent = "음식 및 음료";
 }
   
    if (info.hasGoods === false) {
