@@ -1103,8 +1103,31 @@ if (info) {
     document.getElementById("rideinfo").parentElement.style.display = "none";
   }
 
-  if (info.hasGoods === false) {
-    hide("goodsSection");
+    const hideEntryIds = ["troy", "scylla_charybdis", "helios_cattle", "shipwreck", "calypso", "drift"];
+    const hideQueueIds = ["troy", "cicones", "aeolus", "scylla_charybdis", "helios_cattle", "shipwreck", "calypso", "drift"];
+    const hidePhotozoneIds = ["troy", "cicones", "aeolus", "underworld", "sirens", "scylla_charybdis", "helios_cattle", "shipwreck", "calypso", "drift"];
+
+    if (hideEntryIds.includes(id)) {
+    hide("entrySection");
+  }
+
+    if (hideQueueIds.includes(id)) {
+    document.querySelector("#defaultSection h4:nth-of-type(1)").style.display = "none";
+    hide("queueImg");
+    hide("queueText");
+  }
+
+   if (hidePhotozoneIds.includes(id)) {
+   hide("photozoneSection");
+ }
+
+   if (id === "ithaca") {
+   document.getElementById("space").parentElement.style.display = "none";
+ }
+
+
+   if (info.hasGoods === false) {
+   hide("goodsSection");
   }
 
 } else {
