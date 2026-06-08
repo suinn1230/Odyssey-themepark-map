@@ -1132,6 +1132,12 @@ if (info.type === "snack") {
       
   document.getElementById("title").textContent = info.title || "";
 
+  document.getElementById("story").innerHTML = info.story || "";
+  document.getElementById("mission").innerHTML = info.mission || "";
+  document.getElementById("space").innerHTML = info.space || "";
+  document.getElementById("cast").innerHTML = info.cast || "";
+  document.getElementById("rideinfo").innerHTML = info.rideinfo || "";
+
   if (info.type === "show") {
   document.getElementById("rideInfoTitle").textContent = "관람 정보";
 } else if (info.type === "restaurant") {
