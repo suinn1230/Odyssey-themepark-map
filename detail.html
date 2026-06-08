@@ -1142,16 +1142,34 @@ if (info) {
     hide("photozoneSection");
   }
 
-if (id === "cyclops" || id === "poseidon") {
+if (
+  id === "troy" ||
+  id === "cicones" ||
+  id === "aeolus" ||
+  id === "laestrygonians" ||
+  id === "underworld" ||
+  id === "sirens" ||
+  id === "scylla_charybdis" ||
+  id === "helios_cattle" ||
+  id === "shipwreck" ||
+  id === "calypso" ||
+  id === "ithaca"
+) {
   document.getElementById("goodsTitle").textContent = "굿즈";
 }
 
 if (
   id === "lotophagi" ||
-  id === "circe" ||
-  id === "phaeacia"
+  id === "circe"
 ) {
   document.getElementById("goodsTitle").textContent = "간식";
+}
+
+if (
+  id === "cyclops" ||
+  id === "poseidon"
+) {
+  document.getElementById("goodsTitle").textContent = "굿즈 및 간식";
 }
   
    if (info.hasGoods === false) {
