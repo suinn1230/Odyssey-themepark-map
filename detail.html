@@ -127,13 +127,13 @@
   <p id="entryText"></p>
 </div>
 
-  <h3>탑승 정보</h3>
+  <h3 id="mainImageTitle">탑승 정보</h3>
 
-<h4>대기 / 큐 동선</h4>
+<h4 id="queueTitle">대기 / 큐 동선</h4>
 <img id="queueImg" class="hero" src="" />
 <p id="queueText"></p>
 
-<h4>실제 탑승</h4>
+<h4 id="rideTitle">실제 탑승</h4>
 <div class="ride-gallery">
   <img id="rideImg1" class="hero half" src="" />
   <img id="rideImg2" class="hero half" src="" />
@@ -1112,21 +1112,20 @@ if (info) {
   hide("entrySection");
   hide("photozoneSection");
 
+  document.getElementById("mainImageTitle").textContent = "식당 내부";
+
+  hide("queueTitle");
+  hide("queueImg");
+  hide("queueText");
+
+  hide("rideTitle");
+
   document.getElementById("missionTitle").textContent = "체험 요소 및 서비스";
   document.getElementById("spaceTitle").textContent = "어트랙션과의 연결성";
 
   document.getElementById("cast").parentElement.style.display = "none";
   document.getElementById("rideinfo").parentElement.style.display = "none";
-
-  document.querySelector("#defaultSection h3:nth-of-type(2)").textContent = "식당 내부";
-
-  document.querySelector("#defaultSection h4:nth-of-type(1)").style.display = "none";
-  hide("queueImg");
-  hide("queueText");
-
-  document.querySelector("#defaultSection h4:nth-of-type(2)").style.display = "none";
 }
-
     
 
    if (id === "ithaca") {
