@@ -183,10 +183,7 @@
         <h3 id="rideInfoTitle">탑승 정보</h3>
 <div id="rideinfo"></div>
     </div>
-      <div class="card" id="noteCard">
-      <h3>비고</h3>
-      <div id="note"></div>
-   </div>
+     
     </div>
   </div>
 
@@ -1179,13 +1176,107 @@ setImg("goodsImg4", info.goodsImg4);
   if (info.hasGoods === false) {
   document.getElementById("goodsSection").style.display = "none";
 }
+
+  
+if (id === "troy") {
+  document.getElementById("entrySection").style.display = "none";
+  document.getElementById("photozoneSection").style.display = "none";
+
+  document.querySelector("#defaultSection h4:nth-of-type(1)").style.display = "none";
+  document.getElementById("queueImg").style.display = "none";
+  document.getElementById("queueText").style.display = "none";
+}
+
+
+if (id === "cicones") {
+  document.querySelector("#defaultSection h4:nth-of-type(1)").style.display = "none";
+  document.getElementById("queueImg").style.display = "none";
+  document.getElementById("queueText").style.display = "none";
+
+  document.getElementById("photozoneSection").style.display = "none";
+}
+
+
+
+if (id === "aeolus") {
+  document.querySelector("#defaultSection h4:nth-of-type(1)").style.display = "none";
+  document.getElementById("queueImg").style.display = "none";
+  document.getElementById("queueText").style.display = "none";
+
+  document.getElementById("photozoneSection").style.display = "none";
+}
+
+
+if (id === "underworld") {
+  document.getElementById("photozoneSection").style.display = "none";
+}
+
+
+if (id === "sirens") {
+  document.getElementById("photozoneSection").style.display = "none";
+}
+
+
+if (id === "scylla_charybdis") {
+  document.getElementById("entrySection").style.display = "none";
+  document.getElementById("photozoneSection").style.display = "none";
+
+  document.querySelector("#defaultSection h4:nth-of-type(1)").style.display = "none";
+  document.getElementById("queueImg").style.display = "none";
+  document.getElementById("queueText").style.display = "none";
+}
+
+
+if (id === "helios_cattle") {
+  document.getElementById("entrySection").style.display = "none";
+  document.getElementById("photozoneSection").style.display = "none";
+
+  document.querySelector("#defaultSection h4:nth-of-type(1)").style.display = "none";
+  document.getElementById("queueImg").style.display = "none";
+  document.getElementById("queueText").style.display = "none";
+}
+
+
+if (id === "shipwreck") {
+  document.getElementById("entrySection").style.display = "none";
+  document.getElementById("photozoneSection").style.display = "none";
+
+  document.querySelector("#defaultSection h4:nth-of-type(1)").style.display = "none";
+  document.getElementById("queueImg").style.display = "none";
+  document.getElementById("queueText").style.display = "none";
+}
+
+
+if (id === "calypso") {
+  document.getElementById("entrySection").style.display = "none";
+  document.getElementById("photozoneSection").style.display = "none";
+
+  document.querySelector("#defaultSection h4:nth-of-type(1)").style.display = "none";
+  document.getElementById("queueImg").style.display = "none";
+  document.getElementById("queueText").style.display = "none";
+}
+
+
+if (id === "drift") {
+  document.getElementById("entrySection").style.display = "none";
+  document.getElementById("photozoneSection").style.display = "none";
+
+  document.querySelector("#defaultSection h4:nth-of-type(1)").style.display = "none";
+  document.getElementById("queueImg").style.display = "none";
+  document.getElementById("queueText").style.display = "none";
+}
+
+
+if (id === "ithaca") {
+  document.getElementById("space").parentElement.style.display = "none";
+}
   
   document.getElementById("story").innerHTML = info.story || "";
   document.getElementById("mission").innerHTML = info.mission || "";
   document.getElementById("space").innerHTML = info.space || "";
   document.getElementById("cast").innerHTML = info.cast || "";
   document.getElementById("rideinfo").innerHTML = info.rideinfo || "";
-  document.getElementById("note").textContent = info.note || "";
+  
 } else {
   document.getElementById("title").textContent = "정보 없음";
   document.getElementById("story").textContent = "잘못된 접근이거나 아직 데이터가 없는 항목입니다.";
